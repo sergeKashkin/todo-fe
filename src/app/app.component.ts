@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './todos/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'todo-list';
+  public title: string = 'Todoing';
+
+  constructor(private userService: UserService) {
+  }
 }

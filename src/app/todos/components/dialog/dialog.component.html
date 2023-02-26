@@ -1,0 +1,25 @@
+
+<div class="todo-dialog">
+  <h2 mat-dialog-title>{{title}}</h2>
+
+  <mat-dialog-content *ngIf="form" [formGroup]="form" class="dialog-content">
+
+    <mat-form-field>
+      <mat-label>Task title</mat-label>
+        <input matInput required="true"
+          formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Task description</mat-label>
+      <textarea matInput required="true"
+        formControlName="description"></textarea>
+    </mat-form-field>
+      <mat-slide-toggle *ngIf="isCompleted !== undefined" formControlName="isCompleted">Task completed</mat-slide-toggle>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="dialog-actions">
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+    <button *ngIf="id" class="mat-raised-button mat-warn" color="warn" (click)="delete()">Delete</button>
+  </mat-dialog-actions>
+</div>

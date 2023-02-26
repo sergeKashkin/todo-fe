@@ -1,0 +1,8 @@
+<div class="todo" *ngIf="todo" [ngClass]="{'completed': todo.isCompleted}" (click)="onTodoClick()">
+  <div class="top">
+    <div class="title" [innerText]="todo.name"></div>
+  </div>
+  <div class="bottom">
+    <div class="subtitle" [innerText]="todo.description"></div>
+  </div>
+</div>

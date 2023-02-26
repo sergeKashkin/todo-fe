@@ -1,0 +1,37 @@
+:host {
+
+  .todo-dialog {
+    border-radius: 1em;
+    background-color: white;
+    width: 40vw;
+    height: 35vh;
+
+    .dialog-content {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dialog-actions {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        font-size: 1em;
+        padding: .5em;
+      }
+    }
+  }
+
+  @media (max-width:500px)  {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .todo-dialog {
+      width: 60vw;
+      height: 50vh;
+    }
+  }
+
+}

@@ -1,0 +1,38 @@
+:host {
+
+  .todo {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    margin: 1em;
+
+    .top {
+      display: flex;
+      align-items: row;
+
+      .title {
+        flex-basis: 80%;
+        font-size: 2em;
+      }
+
+      .action {
+        flex-basis: 20%;
+        height: 100%;
+      }
+    }
+
+    .bottom {
+
+      .subtitle {
+        text-overflow: ellipsis;
+      }
+    }
+
+    &.completed {
+      background-color: #AFE1AF;
+    }
+  }
+}

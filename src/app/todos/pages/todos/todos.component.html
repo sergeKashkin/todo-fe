@@ -1,0 +1,6 @@
+<div class="todos-page">
+  <div class="top">
+    <button class="action" (click)="onActionClick(undefined, ActionType.Create)">New task</button>
+  </div>
+  <app-todo *ngFor="let todo of todos" [todo]="todo" (todoClick)="onActionClick($event, ActionType.Edit)"></app-todo>
+</div>
